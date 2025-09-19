@@ -4,10 +4,10 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>KMIT</groupId>
+  <grp>KMIT</grp>
   <artifactId>ORS</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>war</packaging>
+  <packaging>war1</packaging>
 
   <name>ORS Maven Webapp</name>
   <!-- FIXME change it to the project's website -->
@@ -15,7 +15,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>8</maven.compiler.source>
+    <maven.compiler.source>abc</maven.compiler.source>
     <maven.compiler.target>8</maven.compiler.target>
   </properties>
 
@@ -50,7 +50,7 @@
           <version>3.3.0</version>
         </plugin>
         <plugin>
-          <artifactId>maven-war-plugin</artifactId>
+          <artifactId>maven-1war-plugin</artifactId>
           <version>3.4.0</version>
         </plugin>
         <plugin>
