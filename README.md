@@ -86,3 +86,36 @@ pipeline {
 }
     }
 }
+
+
+ Start Minikube
+Open CMD or PowerShell:
+minikube start
+2️⃣ Create an nginx server
+kubectl create deployment mynginx --image=nginx
+Check:
+kubectl get pods
+3️⃣ Expose the deployment
+kubectl expose deployment mynginx --type=NodePort --port=80
+4️⃣ Scale to 4 pods
+kubectl scale deployment myapp --replicas=4
+->Port forwarding: kubectl port-forward svc/myapp 8081:80
+8081 can be replaced by any
+->Kubernets dashboard 
+Minikube dashboard
+->Stopping
+kubectl delete deployment mynginx
+kubectl delete service mynginx
+minikube stop
+______________
+⭐ PART 2 — Nagios in Docker
+1️⃣ Pull image
+docker pull jasonrivers/nagios
+2️⃣ Run Nagios
+docker run --name nagiosdemo -p 8888:80 jasonrivers/nagios
+3️⃣ Open browser
+Go to:
+http://localhost:8888
+Login:
+•	username: nagiosadmin
+•	password: nagios
